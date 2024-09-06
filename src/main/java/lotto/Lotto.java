@@ -1,7 +1,6 @@
 package lotto;
 
 import java.util.List;
-
 //사용자가 구매한 로또 번호와 당첨 번호를 비교하여 당첨 내역 및 수익률을 출력하고 로또 게임을 종료한다.
 
 //- 로또 번호의 숫자 범위는 1~45까지이다.
@@ -16,20 +15,15 @@ import java.util.List;
 public class Lotto {
     private final List<Integer> numbers;
 
-    //1. 구입 금액은 1,000원 단위로 입력 받으며 1,000원으로 나누어 떨어지지 않는 경우 예외 처리한다.
-    //번호는 쉼표(,)를 기준으로 구분한다.
-    //2. 보너스 번호를 입력 받는다.
     public Lotto(List<Integer> numbers) {
         validate(numbers);
         this.numbers = numbers;
     }
 
-    //잘못된 값을 입력할 경우
-    //"[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
     //수익률은 소수점 둘째 자리에서 반올림한다. (ex. 100.0%, 51.5%, 1,000,000.0%)
     private void validate(List<Integer> numbers) {
         if (numbers.size() != 6) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("[ERROR] ");
         }
     }
 
