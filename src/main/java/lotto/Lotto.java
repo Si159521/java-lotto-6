@@ -18,17 +18,26 @@ public class Lotto {
     public Lotto(List<Integer> numbers) {
         validate(numbers);
         this.numbers = numbers;
+        //6개의 1~45 정수 랜덤으로 할당
+        //,를 기준으로 리스트 구성
+        for(int i=0;i<6;i++){
+            numbers.get(i) =
+        }
     }
 
-    //수익률은 소수점 둘째 자리에서 반올림한다. (ex. 100.0%, 51.5%, 1,000,000.0%)
     private void validate(List<Integer> numbers) {
         if (numbers.size() != 6) {
             throw new IllegalArgumentException("[ERROR] ");
         }
     }
 
-    // TODO: 추가 기능 구현
+    //수익률은 소수점 둘째 자리에서 반올림한다. (ex. 100.0%, 51.5%, 1,000,000.0%)
+    public void profitability(List<Integer> numbers){
+
+    }
+
+    //6자리 숫자의 로또티켓 생성
     public void printNumbers() {
-        System.out.println("Lotto Numbers: " + numbers);
+        System.out.println("[" + numbers + "]");
     }
 }
