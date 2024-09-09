@@ -14,8 +14,8 @@ public class Application {
 
         //잘못된 값을 입력할 경우
         //"[ERROR]"로 시작하는 에러 메시지를 출력 후 그 부분부터 입력을 다시 받는다.
-        List<Integer> lottoNumbers = new ArrayList<>(); //생성된 로또티켓을 저장하는 리스트
-        Lotto lotto=new Lotto(lottoNumbers);
+        List<Integer> lottoTickets = new ArrayList<>(); //생성된 로또티켓들을 저장하는 리스트
+        Lotto lotto=new Lotto(lottoTickets);
 
         List<Integer> userEnter = new ArrayList<>();
 

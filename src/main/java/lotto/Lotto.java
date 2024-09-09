@@ -1,6 +1,7 @@
 package lotto;
 
 import java.util.List;
+import java.util.Random;
 //사용자가 구매한 로또 번호와 당첨 번호를 비교하여 당첨 내역 및 수익률을 출력하고 로또 게임을 종료한다.
 
 //- 로또 번호의 숫자 범위는 1~45까지이다.
@@ -20,8 +21,11 @@ public class Lotto {
         this.numbers = numbers;
         //6개의 1~45 정수 랜덤으로 할당
         //,를 기준으로 리스트 구성
+        Random random = new Random();
+        int randomNum= random.nextInt(45)+1;
+
         for(int i=0;i<6;i++){
-            numbers.get(i) =
+            numbers.get(i) = randomNum;
         }
     }
 
